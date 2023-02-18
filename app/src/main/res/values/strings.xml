@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WWTestApp</string>
+    <string name="link">link</string>
+    <string name="start_game">Start Game</string>
+    <string name="circle">Circle</string>
+    <string name="square">Square</string>
+    <string name="triangle">Triangle</string>
+    <string name="play_again">Play Again</string>
+</resources>
