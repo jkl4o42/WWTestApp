@@ -1,5 +1,6 @@
 package com.jkl.wwtestapp.score.presentation
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -11,12 +12,13 @@ class ScoreFragment : BaseFragment<ScoreViewModel.Base>() {
     override val viewModelClass: Class<ScoreViewModel.Base> = ScoreViewModel.Base::class.java
     override val layoutId: Int = R.layout.fragment_score
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val playAgainButton = view.findViewById<Button>(R.id.button_pay_again)
         val scoreTextView = view.findViewById<TextView>(R.id.text_view_score)
 
-        scoreTextView.text = "Score: ${viewModel.read()}"
+        scoreTextView.text = "Game Over \nscore: ${viewModel.read()}"
 
         playAgainButton.setOnClickListener {
             viewModel.showTitle()
